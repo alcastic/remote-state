@@ -1,11 +1,24 @@
 import React from 'react';
+import './App.css'
+import Login from './component/Login/Login'
+import StatesPane from './component/StatesPane/StatesPane'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      Hello World
-    </div>
+    <Router>
+    <Switch>
+      <Route path="/states">
+        <StatesPane />
+      </Route>
+      <Route path="/login">
+        <Login />
+      </Route>
+     </Switch>
+     </Router>
   );
 }
-
-export default App;
